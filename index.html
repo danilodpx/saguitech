@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Nota Fiscal Eletrônica de Serviço</title>
+</head>
+<body>
+    <div class="logo"></div>
+    <div class="container">
+        <h1>NF-e de Serviço</h1>
+        <form id="notaForm" onsubmit="return calcularNota()">
+            <label for="nomeCliente">Nome do Cliente:</label>
+            <input type="text" id="nomeCliente" required>
+            <label for="dataEmissao">Data de Emissão:</label>
+            <input type="date" id="dataEmissao" required>
+            <label for="descricaoServico">Descrição do Serviço:</label>
+            <textarea id="descricaoServico" rows="4" required></textarea>
+            <label for="valorServico">Valor do Serviço (R$):</label>
+            <input type="number" id="valorServico" required>
+            <label for="taxaImposto">Taxa de Imposto (%):</label>
+            <input type="number" id="taxaImposto" required>
+            <button type="submit">Calcular Nota Fiscal</button>
+        </form>
+        <div id="resultado"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
